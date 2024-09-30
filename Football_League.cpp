@@ -21,6 +21,22 @@ struct Match {
     int leg;
     int weekend;
 }
+// Jabez
+void readTeamsFromFile(const string& filename, vector<Team>& teams) {
+    ifstream file(filename);
+    string line;
+
+    getline(file, line);
+    while (getline(file, line)) {
+        stringstream s(line);
+        Team team;
+        getline(s, team.name, ',');   // Assuming comma-delimited file
+        getline(s, team.town, ',');
+        getline(s, team.stadium, ',');
+        teams.push_back(team);
+    }
+    file.close();
+}
 // Jemima
 void generateFixtures(const vector<Team>& teams, vector<Match>& fixtures) {
     int weekend = 1;
