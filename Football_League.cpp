@@ -120,3 +120,74 @@ void generateFixtures(const vector<Team>& teams, vector<Match>& fixtures) {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Schola
+int main() {
+    vector<Team> teams;
+    readTeamsFromFile("teams.csv", teams);
+
+    vector<Match> fixtures;
+    generateFixtures(teams, fixtures);
+    saveFixturesToFile(fixtures, "fixtures.csv");
+
+    cout << "Welcome to the MatchMatrix!\n";
+    cout << "Fixtures have been generated and saved to fixtures.csv\n";
+
+    while (true) {
+        int selectedWeekend;
+        cout << "Please enter the weekend number (1 to 33) to view the fixtures, or 0 to exit: ";
+        cin >> selectedWeekend;
+
+        if (selectedWeekend == 0) {
+            cout << "Thank you for using Matchmatrix. Goodbye!\n";
+            break;
+        }
+
+        if (selectedWeekend < 1 || selectedWeekend > 33) {
+            cout << "Invalid weekend number. Please enter a number between 1 and 33.\n";
+        } else {
+            displayWeekendMatches(fixtures, selectedWeekend);
+            char choice;
+            cout << "Would you like to view fixtures for another weekend? (y/n): ";
+            cin >> choice;
+            if (choice != 'y' && choice != 'Y') {
+                cout << "Thank you for using Matchmatrix. Goodbye!\n";
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
