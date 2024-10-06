@@ -1,4 +1,4 @@
-# MATCH-MATRIX
+# ABC PREMIER LEGAUE
    # Overview
    This is a program designed to generate football fixture for a sports league. The generated fixtures are saved to a CSV file and users can view the matches scheduled for each weekend on the console interface
 
