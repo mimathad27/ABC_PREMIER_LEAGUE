@@ -162,7 +162,7 @@ int main() {
     generateFixtures(teams, fixtures);
     saveFixturesToFile(fixtures, "fixtures.csv");
 
-    cout << "Welcome to the MatchMatrix!\n";
+    cout << "Welcome to the ABC Premier League!\n";
     cout << "Fixtures have been generated and saved to fixtures.csv\n";
 
     while (true) {
@@ -171,7 +171,7 @@ int main() {
         cin >> selectedWeekend;
 
         if (selectedWeekend == 0) {
-            cout << "Thank you for using Matchmatrix. Goodbye!\n";
+            cout << "Thank you for using ABC Premier League. Goodbye!\n";
             break;
         }
 
@@ -183,7 +183,7 @@ int main() {
             cout << "Would you like to view fixtures for another weekend? (y/n): ";
             cin >> choice;
             if (choice != 'y' && choice != 'Y') {
-                cout << "Thank you for using Matchmatrix. Goodbye!\n";
+                cout << "Thank you for using ABC Premier Legaue. Goodbye!\n";
                 break;
             }
         }
