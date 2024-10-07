@@ -137,9 +137,21 @@ void saveFixturesToFile(const vector<Match>& fixtures, const string& filename) {
     file.close();
 }
 
-
-
-
+// Kanyi
+void displayWeekendMatches(const vector<Match>& fixtures, int selectedWeekend) {
+    cout << "Matches for Weekend #" << selectedWeekend << ":\n";
+    bool found = false;
+    for (const auto& match : fixtures) {
+        if (match.weekend == selectedWeekend) {
+            cout << match.homeTeam << " vs " << match.awayTeam
+                 << " at " << match.stadium << " (" << match.localTown << ")\n";
+            found = true;
+        }
+    }
+    if (!found) {
+        cout << "No matches scheduled for this weekend.\n";
+    }
+}
 
 
 
