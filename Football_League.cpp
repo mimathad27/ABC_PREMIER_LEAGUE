@@ -21,6 +21,7 @@ struct Match {
     int leg;
     int weekend;
 }
+
 // Jabez
 void readTeamsFromFile(const string& filename, vector<Team>& teams) {
     ifstream file(filename);
