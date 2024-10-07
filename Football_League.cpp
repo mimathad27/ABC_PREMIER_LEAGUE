@@ -153,33 +153,6 @@ void displayWeekendMatches(const vector<Match>& fixtures, int selectedWeekend) {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Schola
 int main() {
     vector<Team> teams;
