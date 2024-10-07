@@ -122,6 +122,20 @@ void generateFixtures(const vector<Team>& teams, vector<Match>& fixtures) {
     }
 }
 
+// Sean
+void saveFixturesToFile(const vector<Match>& fixtures, const string& filename) {
+    ofstream file(filename);
+    file << "Home Team,Away Team,Local Town,Stadium,Leg,Weekend\n";
+    for (const auto& match : fixtures) {
+        file << match.homeTeam << ","
+             << match.awayTeam << ","
+             << match.localTown << ","
+             << match.stadium << ","
+             << match.leg << ","
+             << "Weekend #" << match.weekend << "\n";
+    }
+    file.close();
+}
 
 
 
