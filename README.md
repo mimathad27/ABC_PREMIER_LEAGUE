@@ -12,11 +12,11 @@
 
 
 # LIBRARIES
-*string- Stores text and data 
-*iosstream - Reads and displays data in the console
-*getline - Reads a line
-*while - Creates a while loop
-*vector - Stores generated fixtures in an array
-*structs - Groups related variables into one place
-*sstream - Allows perfoming, insertion,extraction & other operations
-*void - Indicates a function that does not return a value
+* string- Stores text and data 
+* iosstream - Reads and displays data in the console
+* getline - Reads a line
+* while - Creates a while loop
+* vector - Stores generated fixtures in an array
+* structs - Groups related variables into one place
+* sstream - Allows perfoming, insertion,extraction & other operations
+* void - Indicates a function that does not return a value
